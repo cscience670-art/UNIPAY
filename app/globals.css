@@ -1,0 +1,61 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #5c5c7b;
+  border-radius: 50px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #7878a3;
+}
+
+
+
+ /* Home */
+ .home {
+  @apply no-scrollbar flex w-full flex-row max-xl:max-h-screen max-xl:overflow-y-scroll;
+}
+
+.home-content {
+  @apply no-scrollbar flex w-full flex-1 flex-col gap-8 px-5 sm:px-8 py-7 lg:py-12 xl:max-h-screen xl:overflow-y-scroll;
+}
+
+.home-header {
+  @apply flex flex-col justify-between gap-8;
+}
+
